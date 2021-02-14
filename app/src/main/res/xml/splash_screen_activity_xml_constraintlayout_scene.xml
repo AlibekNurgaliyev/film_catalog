@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        >
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:translationX="-250dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:translationX="200dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:translationY="250dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="30"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:translationY="50dp"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:translationX="-250dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:translationX="-250dp"
+                motion:framePosition="30"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:translationX="250dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+            <KeyAttribute
+                android:translationX="250dp"
+                motion:framePosition="30"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:scaleX="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:scaleY="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:scaleX="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:scaleY="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:scaleX="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:scaleY="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:scaleX="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:scaleY="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:scaleX="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+            <KeyAttribute
+                android:scaleY="0.7"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:scaleY="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_the" />
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:scaleY="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_the_1" />
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:scaleY="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_movie" />
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:scaleY="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_movie_db_1" />
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+            <KeyAttribute
+                android:scaleY="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/splash_screen_movie_db" />
+
+
+        </KeyFrameSet>
+        <OnClick
+            motion:clickAction="transitionToEnd"
+            motion:targetId="@+id/splash_screen_the"
+
+            />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+    </ConstraintSet>
+</MotionScene>
