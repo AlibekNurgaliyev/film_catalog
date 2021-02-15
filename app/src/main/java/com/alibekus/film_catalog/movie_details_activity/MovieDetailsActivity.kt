@@ -2,12 +2,14 @@ package com.alibekus.film_catalog.movie_details_activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.alibekus.film_catalog.R
+import com.alibekus.film_catalog.main_menu_activity.MainMenuActivity
 import com.alibekus.film_catalog.network.Movie
 import com.alibekus.film_catalog.presentation.MovieAdapter
 import com.alibekus.film_catalog.presentation.MoviesRepository
@@ -27,6 +29,7 @@ class MovieDetails : AppCompatActivity() {
     private lateinit var releaseDate: TextView
     private lateinit var overview: TextView
     private lateinit var suggestedMovieText: TextView
+    private lateinit var arrowBackButton:ImageButton
 
     private lateinit var suggestedMovies: RecyclerView
     private lateinit var suggestedMoviesAdapter: MovieAdapter
@@ -56,6 +59,12 @@ class MovieDetails : AppCompatActivity() {
         title = findViewById(R.id.movie_title)
         releaseDate = findViewById(R.id.movie_release_date)
         overview = findViewById(R.id.movie_overview)
+        arrowBackButton = findViewById(R.id.activity_movie_details_arrow_back)
+
+        arrowBackButton.setOnClickListener {
+            val intent = Intent(this,MainMenuActivity::class.java)
+            startActivity(intent)
+        }
 
         suggestedMovies = findViewById(R.id.suggested_movies)
         suggestedMoviesLayoutManager = LinearLayoutManager(
