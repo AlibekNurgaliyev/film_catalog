@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    margin & padding-->
+    <dimen name="layout_spacing_8x">8dp</dimen>
+    <dimen name="layout_spacing_16x">16dp</dimen>
+    <!--    text size-->
+    <dimen name="text_size_12x">12sp</dimen>
+    <dimen name="text_size_16x">16sp</dimen>
+    <dimen name="text_size_18x">18sp</dimen>
+    <dimen name="text_size_24x">24sp</dimen>
+    <!--    splash_screen_activity params-->
+    <dimen name="motion_view_width">200dp</dimen>
+    <dimen name="motion_view_height">158dp</dimen>
+    <dimen name="ic_the_width">112dp</dimen>
+    <dimen name="ic_the_height">40dp</dimen>
+    <dimen name="ic_the_1_width">73dp</dimen>
+    <dimen name="ic_the_1_height">40dp</dimen>
+    <dimen name="ic_movie_width">185dp</dimen>
+    <dimen name="ic_movie_height">40dp</dimen>
+    <dimen name="ic_db_1_width">105dp</dimen>
+    <dimen name="ic_db_1_height">40dp</dimen>
+    <dimen name="ic_db_width">78dp</dimen>
+    <dimen name="ic_db_height">40dp</dimen>
+    <!--activity_main_menu-->
+    <dimen name="tmdb_logo_image_width">300dp</dimen>
+    <!--item_movie-->
+    <dimen name="item_movie_width">128dp</dimen>
+    <dimen name="item_movie_height">172dp</dimen>
+    <dimen name="corner_radius">6dp</dimen>
+
+</resources>

@@ -8,5 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#0E0D32</color>
+<!--    <color name="colorPrimary">#0E0D32</color>-->
+    <color name="colorPrimary">#030217</color>
+
+<!--    activity_movie_details-->
+    <color name="movie_release_date_color">#8C8686</color>
 </resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".movie_details_activity.MovieDetails"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/movie_backdrop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/backdrop_guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/backdrop_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4"
+                />
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_spacing_16x"
+                android:layout_marginTop="@dimen/layout_spacing_16x"
+                android:layout_marginEnd="@dimen/layout_spacing_16x"
+                android:layout_marginBottom="@dimen/layout_spacing_16x"
+                android:paddingBottom="@dimen/layout_spacing_16x"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_24x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backdrop_guideline"
+                />
+
+            <TextView
+                android:id="@+id/movie_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_spacing_16x"
+                android:paddingBottom="@dimen/layout_spacing_8x"
+                android:textColor="@color/movie_release_date_color"
+                android:textSize="@dimen/text_size_12x"
+                app:layout_constraintStart_toStartOf="@id/movie_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_title"
+                />
+
+            <TextView
+                android:id="@+id/movie_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_spacing_16x"
+                android:layout_marginTop="@dimen/layout_spacing_16x"
+                android:layout_marginEnd="@dimen/layout_spacing_16x"
+                android:layout_marginBottom="@dimen/layout_spacing_16x"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_title"
+                />
+
+            <TextView
+                android:id="@+id/suggested_movies_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/layout_spacing_16x"
+                android:layout_marginEnd="@dimen/layout_spacing_16x"
+                android:paddingBottom="@dimen/layout_spacing_8x"
+                android:text="@string/suggested_movies"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18x"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_overview"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/suggested_movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_spacing_8x"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/layout_spacing_16x"
+                android:paddingEnd="@dimen/layout_spacing_16x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/suggested_movies_text"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

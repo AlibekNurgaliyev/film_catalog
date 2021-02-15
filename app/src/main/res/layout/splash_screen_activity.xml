@@ -4,67 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".SplashScreenActivity">
+    tools:context=".splash_screen_activity.SplashScreenActivity"
+    >
 
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/motionLayout"
-        android:layout_width="200dp"
-        android:layout_height="158dp"
+        android:layout_width="@dimen/motion_view_width"
+        android:layout_height="@dimen/motion_view_height"
         app:layoutDescription="@xml/splash_screen_activity_xml_constraintlayout_scene"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <ImageView
             android:id="@+id/splash_screen_the"
-            android:layout_width="112dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_the_width"
+            android:layout_height="@dimen/ic_the_height"
             android:src="@drawable/ic_the"
             app:layout_constraintBottom_toTopOf="@+id/splash_screen_movie"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/splash_screen_the_1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <ImageView
             android:id="@+id/splash_screen_the_1"
-            android:layout_width="73dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_the_1_width"
+            android:layout_height="@dimen/ic_the_1_height"
             android:src="@drawable/ic_the_1"
             app:layout_constraintBottom_toTopOf="@+id/splash_screen_movie"
             app:layout_constraintLeft_toRightOf="@+id/splash_screen_the"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <ImageView
             android:id="@+id/splash_screen_movie"
-            android:layout_width="185dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_movie_width"
+            android:layout_height="@dimen/ic_movie_height"
             android:src="@drawable/ic_movie"
             app:layout_constraintBottom_toTopOf="@+id/splash_screen_movie_db"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/splash_screen_the" />
+            app:layout_constraintTop_toBottomOf="@+id/splash_screen_the"
+            />
 
         <ImageView
             android:id="@+id/splash_screen_movie_db_1"
-            android:layout_width="105dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_db_1_width"
+            android:layout_height="@dimen/ic_db_1_height"
             android:src="@drawable/ic_db_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/splash_screen_movie_db"
-            app:layout_constraintTop_toBottomOf="@+id/splash_screen_movie" />
+            app:layout_constraintTop_toBottomOf="@+id/splash_screen_movie"
+            />
 
         <ImageView
             android:id="@+id/splash_screen_movie_db"
-            android:layout_width="78dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_db_width"
+            android:layout_height="@dimen/ic_db_height"
             android:src="@drawable/ic_db"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/splash_screen_movie_db_1"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/splash_screen_movie" />
+            app:layout_constraintTop_toBottomOf="@+id/splash_screen_movie"
+            />
     </androidx.constraintlayout.motion.widget.MotionLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

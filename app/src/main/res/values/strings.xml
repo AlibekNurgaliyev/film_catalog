@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Film_catalog</string>
+    <string name="popular_films">Popular Films</string>
+    <string name="now_playing_films">Today Trending Films</string>
+    <string name="internet_connection_error">Error: please check your connection</string>
+    <string name="top_rated_films">Top Rated Films</string>
+    <string name="upcoming_films">Upcoming Films</string>
+    <string name="suggested_movies">You might be interested to watch:</string>
 </resources>
