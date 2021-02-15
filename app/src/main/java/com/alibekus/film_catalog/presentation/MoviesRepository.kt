@@ -22,6 +22,7 @@ object MoviesRepository {
     }
 
     fun getNowPlayingMovies(
+
         page: Int = 1,
         onSuccess: (movies: List<Movie>) -> Unit,
         onError: () -> Unit
