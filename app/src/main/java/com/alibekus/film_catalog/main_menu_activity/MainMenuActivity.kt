@@ -2,6 +2,7 @@ package com.alibekus.film_catalog.main_menu_activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,7 @@ private const val VISIBLE_THRESHOLD = 10
 
 class MainMenuActivity : AppCompatActivity() {
     private lateinit var internetConnectionErrorMessage: TextView
+    private lateinit var progressBar: ProgressBar
 
     private lateinit var nowPlayingMoviesCaption: TextView
     private lateinit var popularMoviesCaption: TextView
@@ -50,14 +52,17 @@ class MainMenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
 
         bindViews()
+
         getPopularMovies()
         getNowPlayingMovies()
         getTopRatedMovies()
         getUpcomingMovies()
+
     }
 
     private fun bindViews() {
         internetConnectionErrorMessage = findViewById(R.id.internet_connection_error)
+        progressBar = findViewById(R.id.activity_main_menu_progress_bar)
 
         nowPlayingMoviesCaption = findViewById(R.id.now_playing_movies_caption)
         popularMoviesCaption = findViewById(R.id.popular_movies_caption)
@@ -110,6 +115,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     private fun getNowPlayingMovies() {
+        progressBar.show()
         MoviesRepository.getNowPlayingMovies(
             nowPlayingMoviesPage,
             ::onNowPlayingMoviesFetched,
@@ -118,6 +124,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     private fun getPopularMovies() {
+        progressBar.show()
         MoviesRepository.getPopularMovies(
             popularMoviesPage,
             ::onPopularMoviesFetched,
@@ -126,6 +133,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     private fun getTopRatedMovies() {
+        progressBar.show()
         MoviesRepository.getTopRatedMovies(
             topRatedMoviesPage,
             ::onTopRatedMoviesFetched,
@@ -134,6 +142,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     private fun getUpcomingMovies() {
+        progressBar.show()
         MoviesRepository.getUpcomingMovies(
             upcomingMoviesPage,
             ::onUpcomingMoviesFetched,
@@ -161,6 +170,8 @@ class MainMenuActivity : AppCompatActivity() {
     private fun onNowPlayingMoviesFetched(movies: List<Movie>) {
         nowPlayingMoviesAdapter.appendMovies(movies)
         extendNowPlayingMoviesScrollListener()
+        nowPlayingMoviesCaption.show()
+        progressBar.hide()
     }
 
     private fun extendPopularMoviesScrollListener() {
@@ -183,6 +194,8 @@ class MainMenuActivity : AppCompatActivity() {
     private fun onPopularMoviesFetched(movies: List<Movie>) {
         popularMoviesAdapter.appendMovies(movies)
         extendPopularMoviesScrollListener()
+        popularMoviesCaption.show()
+        progressBar.hide()
     }
 
     private fun extendTopRatedMoviesScrollListener() {
@@ -206,6 +219,8 @@ class MainMenuActivity : AppCompatActivity() {
     private fun onTopRatedMoviesFetched(movies: List<Movie>) {
         topRatedMoviesAdapter.appendMovies(movies)
         extendTopRatedMoviesScrollListener()
+        topRatedMoviesCaption.show()
+        progressBar.hide()
     }
 
     private fun extendUpcomingMoviesScrollListener() {
@@ -228,14 +243,11 @@ class MainMenuActivity : AppCompatActivity() {
     private fun onUpcomingMoviesFetched(movies: List<Movie>) {
         upcomingMoviesAdapter.appendMovies(movies)
         extendUpcomingMoviesScrollListener()
+        upcomingMoviesCaption.show()
+        progressBar.hide()
     }
 
     private fun onError() {
-        popularMoviesCaption.hide()
-        topRatedMoviesCaption.hide()
-        upcomingMoviesCaption.hide()
-        nowPlayingMoviesCaption.hide()
-
         internetConnectionErrorMessage.show()
     }
 

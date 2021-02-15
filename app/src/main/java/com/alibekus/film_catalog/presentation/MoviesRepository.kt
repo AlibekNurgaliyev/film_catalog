@@ -1,6 +1,7 @@
 package com.alibekus.film_catalog.presentation
 
 
+import android.widget.ProgressBar
 import com.alibekus.film_catalog.network.Api
 import com.alibekus.film_catalog.network.GetMoviesResponse
 import com.alibekus.film_catalog.network.Movie
@@ -9,6 +10,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
+
 
 object MoviesRepository {
     private val api: Api
@@ -19,6 +22,7 @@ object MoviesRepository {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         api = retrofit.create(Api::class.java)
+
     }
 
     fun getNowPlayingMovies(

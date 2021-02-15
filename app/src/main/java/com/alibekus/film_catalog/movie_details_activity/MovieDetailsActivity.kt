@@ -4,15 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.alibekus.film_catalog.R
+import com.alibekus.film_catalog.hide
 import com.alibekus.film_catalog.main_menu_activity.MainMenuActivity
 import com.alibekus.film_catalog.network.Movie
 import com.alibekus.film_catalog.presentation.MovieAdapter
 import com.alibekus.film_catalog.presentation.MoviesRepository
+import com.alibekus.film_catalog.show
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 
@@ -23,7 +26,6 @@ const val MOVIE_RELEASE_DATE = "extra_movie_release_date"
 const val MOVIE_OVERVIEW = "extra_movie_overview"
 
 class MovieDetails : AppCompatActivity() {
-
     private lateinit var backdrop: ImageView
     private lateinit var title: TextView
     private lateinit var releaseDate: TextView
@@ -120,7 +122,6 @@ class MovieDetails : AppCompatActivity() {
         intent.putExtra(MOVIE_RELEASE_DATE, movie.releaseDate)
         intent.putExtra(MOVIE_OVERVIEW, movie.overview)
         startActivity(intent)
-
     }
 
     private fun getDetails(extras: Bundle) {
